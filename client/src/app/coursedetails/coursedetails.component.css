@@ -1,3 +1,7 @@
 .container {
   text-align: center;
 }
+.wrpper {
+  background: #00465b;
+  height: 100%;
+}

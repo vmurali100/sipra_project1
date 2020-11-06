@@ -3,5 +3,18 @@
   top: 0;
   right: 0;
   left: 0;
+  border-bottom: 1px;
+ 
   z-index: 1030;
+  border-bottom: 1px solid #bfd732;
+ 
+}
+.bg-dark{
+  background-color: #00465b !important;
+
+  border-bottom: 2px solid #bfd732;
+  color: #cade54;
+}
+img{
+  width: 50px;
 }
