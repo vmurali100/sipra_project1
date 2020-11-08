@@ -58,6 +58,24 @@
   ></iframe>
   <br />
 
-  <Button>Launch Quiz</Button>
+  <Button (click)="startQuizEvent()">Launch Quiz</Button>
+  <Button routerLink="/dashboard">Back To Dashbord</Button>
+
+  <div class="card" *ngIf="startQuiz">
+    <h5 class="card-header">Quiz</h5>
+    <div class="card-body">
+      <h5 class="card-title">{{currentQuestion}}</h5>
+     
+     <div class="row">
+      <div class="col-md-6" *ngFor="let ans of currentAnswers">
+        <div class="answer" >
+          <span (click)="submitAnswer()">{{ans}}</span>
+          
+        </div>
+      </div>
+    
+     </div> <a href="#" class="btn btn-primary" style="margin: 10px;">Submit</a>
+    </div>
+  </div>
 </div>
 </div> 

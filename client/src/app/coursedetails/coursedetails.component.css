@@ -5,3 +5,12 @@
   background: #00465b;
   height: 100%;
 }
+.answer {
+  cursor: pointer;
+  height: 50px;
+  margin-top: 10px;
+  padding-top: 10px;
+  background: lightblue;
+  color: black;
+  font-weight: bold;
+}
