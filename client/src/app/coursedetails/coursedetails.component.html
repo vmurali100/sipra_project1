@@ -1,8 +1,6 @@
 <div class="wrpper">
-
-
-<div class="container">
-  <iframe
+  <div class="container">
+    <!-- <iframe
     *ngIf="python"
     width="560"
     height="315"
@@ -55,27 +53,25 @@
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen
-  ></iframe>
-  <br />
+  ></iframe> -->
+    <video controls (ended)="vidEnded()" width="600px" style="margin-top: 30px">
+      <source src="assets/angular.mp4" type="video/mp4" />
+    </video>
+    <br />
 
-  <Button (click)="startQuizEvent()">Launch Quiz</Button>
-  <Button routerLink="/dashboard">Back To Dashbord</Button>
-
-  <div class="card" *ngIf="startQuiz">
-    <h5 class="card-header">Quiz</h5>
-    <div class="card-body">
-      <h5 class="card-title">{{currentQuestion}}</h5>
-     
-     <div class="row">
-      <div class="col-md-6" *ngFor="let ans of currentAnswers">
-        <div class="answer" >
-          <span (click)="submitAnswer()">{{ans}}</span>
-          
-        </div>
-      </div>
-    
-     </div> <a href="#" class="btn btn-primary" style="margin: 10px;">Submit</a>
-    </div>
+    <Button
+      (click)="startQuizEvent()"
+      *ngIf="isEnded"
+      class="btn btn-primary"
+      routerLink="/quiz"
+      >Launch Quiz</Button
+    >
+    <!-- <Button >Back To Dashbord</Button> -->
+    <img
+      src="assets/back.png"
+      alt="Back"
+      routerLink="/dashboard"
+      style="width: 50px; margin-left: 20px; cursor: pointer"
+    />
   </div>
 </div>
-</div> 
