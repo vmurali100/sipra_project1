@@ -10,7 +10,20 @@
   height: 50px;
   margin-top: 10px;
   padding-top: 10px;
-  background: lightblue;
-  color: black;
+  background:  #00465b;
+  color: white;
   font-weight: bold;
+}
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #526fa5;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
 }

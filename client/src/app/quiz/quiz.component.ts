@@ -35,39 +35,37 @@ const quizQuestions = [
     answers: ['Netscape', 'Bell Labs', 'Sun Microsystems ', 'IBM'],
   },
   {
-    question: ' Inside which HTML element do we put the JavaScript?',
-    answers: ['Netscape', 'Bell Labs', 'Sun Microsystems ', 'IBM'],
+    question: 'Which of the following is not a Java features?',
+    answers: ['Dynamic', 'Architecture Neutral', 'Use of pointers ', 'Object-oriented'],
   },
   {
-    question: 'Which of the following is correct about features of JavaScript?',
-    answers: ['Netscape', 'Bell Labs', 'Sun Microsystems ', 'IBM'],
+    question: 'In which process, a local variable has the same name as one of the instance variables?',
+    answers: ['Serialization', 'Variable Shadowing', ' Abstraction ', 'Multi-threading'],
   },
   {
-    question:
-      'Choose the correct JavaScript syntax to change the content of the following HTML code.',
-    answers: ['Netscape', 'Bell Labs', 'Sun Microsystems ', 'IBM'],
+    question:'The \u0021 article referred to as a.',
+    answers: ['Unicode escape sequence', 'Octal escape', 'Hexadecimal ', 'Line feed'],
   },
   {
-    question:
-      "Which of the following is the correct syntax to display 'Letsfindcourse' in an alert box using JavaScript?",
-    answers: ['Netscape', 'Bell Labs', 'Sun Microsystems ', 'IBM'],
-  },
-  {
-    question:
-      "What is the correct syntax for referring to an external script called 'LFC.js'?",
-    answers: ['Netscape', 'Bell Labs', 'Sun Microsystems ', 'IBM'],
+    question:"What is the return type of the hashCode() method in the Object class?",
+    answers: ['Object', 'int', 'long ', 'void'],
   },
   {
     question:
-      'Which of the following is not Javascript frameworks or libraries?',
-    answers: ['Netscape', 'Bell Labs', 'Sun Microsystems ', 'IBM'],
+      "Which of the following tool is used to generate API documentation in HTML format from doc comments in source code'?",
+    answers: ['javap tool', 'javaw command', 'Javadoc tool ', 'javah command'],
   },
   {
-    question: 'Why so JavaScript and Java have similar name?',
-    answers: ['Netscape', 'Bell Labs', 'Sun Microsystems ', 'IBM'],
+    question:
+      ' In which process, a local variable has the same name as one of the instance variables?',
+    answers: ['Serialization', 'Variable Shadowing', 'Abstraction ', 'Multi-threading'],
   },
   {
-    question: 'What is the original name of JavaScript?',
-    answers: ['Netscape', 'Bell Labs', 'Sun Microsystems ', 'IBM'],
+    question: 'Which of the following is an immediate subclass of the Panel class?',
+    answers: ['Applet class', 'Window class', 'Frame class ', 'Dialog class'],
+  },
+  {
+    question: 'Which of the following is a reserved keyword in Java?',
+    answers: ['object', 'strictfp', 'main ', 'system'],
   },
 ];
