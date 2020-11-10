@@ -1,17 +1,26 @@
 <div class="container">
   <div class="card">
     <h5 class="card-header">Quiz</h5>
-    <div class="card-body">
+    <div class="card-body" *ngIf="!isQuizCompleted">
       <h5 class="card-title">{{ currentQuestion }}</h5>
 
       <div class="row">
         <div class="col-md-6" *ngFor="let ans of currentAnswers">
           <div class="answer">
-            <span (click)="submitAnswer()">{{ ans }}</span>
+            <span (click)="submitAnswer(ans)">{{ ans }}</span>
           </div>
         </div>
       </div>
       <a href="#" class="btn btn-primary" style="margin: 10px">Submit</a>
+    </div>
+    <div *ngIf="isQuizCompleted">
+      <h2 style="color: white;">Congrats .. You Scored {{ score }} out of 10</h2>
+      <img
+      src="assets/back.png"
+      alt="Back"
+      routerLink="/dashboard"
+      style="width: 50px; margin-left: 20px; cursor: pointer"
+    />
     </div>
   </div>
 </div>

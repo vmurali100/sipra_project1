@@ -8,6 +8,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CoursedetailsComponent } from './coursedetails/coursedetails.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { QuizComponent } from './quiz/quiz.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { QuizComponent } from './quiz/quiz.component';
     DashboardComponent,
     CoursedetailsComponent,
     NavbarComponent,
-    QuizComponent
+    QuizComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
