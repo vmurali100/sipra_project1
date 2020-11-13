@@ -6,37 +6,37 @@ import { Injectable } from '@angular/core';
 export class CommonService {
   courses = [
     {
-      courseName: 'DataScience',
+      courseName: 'ARIBA',
       courseImage: 'DataScience.jpg',
       courseDesc:
         'This is a wider card with supporting text below as a naturallead-in to additional content. This content is a little bit longer.',
     },
     {
-      courseName: 'machineLearning',
+      courseName: 'NSS',
       courseImage: 'machineLearning.jpg',
       courseDesc:
         'This is a wider card with supporting text below as a naturallead-in to additional content. This content is a little bit longer.',
     },
     {
-      courseName: 'python',
+      courseName: 'AMS',
       courseImage: 'python.jpg',
       courseDesc:
         'This is a wider card with supporting text below as a naturallead-in to additional content. This content is a little bit longer.',
     },
     {
-      courseName: 'pythonMegaCouse',
+      courseName: 'EQM',
       courseImage: 'pythonMegaCouse.jpg',
       courseDesc:
         'This is a wider card with supporting text below as a naturallead-in to additional content. This content is a little bit longer.',
     },
     {
-      courseName: 'pythonPrograming',
+      courseName: 'SAA',
       courseImage: 'pythonPrograming.jpg',
       courseDesc:
         'This is a wider card with supporting text below as a naturallead-in to additional content. This content is a little bit longer.',
     },
     {
-      courseName: 'javascript',
+      courseName: 'jSmart Fleet',
       courseImage: 'javascript.jpg',
       courseDesc:
         'This is a wider card with supporting text below as a naturallead-in to additional content. This content is a little bit longer.',
