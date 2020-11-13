@@ -1,8 +1,6 @@
 <div class="sidenav">
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#clients">Clients</a>
-  <a href="#contact">Contact</a>
+  <a href="#about"> Add Course </a>
+  <a href="#about"> Add Quiz </a>
 </div>
 
 <div class="main">
@@ -27,7 +25,19 @@
         <div class="card-body">
           <ul class="list-group">
             <li class="list-group-item" *ngFor="let course of courseDetails">
-              {{ course.courseName }}
+              <div class="row">
+                <div class="col">
+                  {{ course.courseName }}
+                </div>
+                <div class="col">
+                  <button
+                    class="btn btn-primary"
+                    [routerLink]="['/dashboard', course.courseName]"
+                  >
+                    Launch Course
+                  </button>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -47,15 +57,45 @@
       </div>
       <div *ngIf="showContenet == 'quizContent'">
         <div class="card-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-          terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
-          skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-          Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-          single-origin coffee nulla assumenda shoreditch et. Nihil anim
-          keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-          sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-          occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
-          you probably haven't heard of them accusamus labore sustainable VHS.
+          <div class="row">
+            <div class="col">
+              <form>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col">
+                      <label for="exampleInputEmail1">Training </label>
+                    </div>
+                    <div class="col">
+                      <input type="email" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col">
+                      <label for="exampleInputEmail1">No Of Questions </label>
+                    </div>
+                    <div class="col">
+                      <input type="number" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col">
+                      <label for="exampleInputEmail1">Answer Type</label>
+                    </div>
+                    <div class="col">
+                      <input type="number" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+            <div class="col"></div>
+          </div>
         </div>
       </div>
     </div>
