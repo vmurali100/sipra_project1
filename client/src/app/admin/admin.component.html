@@ -1,103 +1,98 @@
 <div class="sidenav">
-  <a href="#about"> Add Course </a>
-  <a href="#about"> Add Quiz </a>
+  <a>Adminstration</a>
+  <a (click)="showContent('users')"> Manage Users </a>
+  <a (click)="showContent('roles')"> Manage Roles </a>
 </div>
 
 <div class="main">
-  <div class="accordion">
-    <div class="card" (click)="show('training')">
-      <div class="card-header" id="headingOne">
-        <h5 class="mb-0">
-          <button
-            class="btn btn-link"
-            type="button"
-            data-toggle="collapse"
-            data-target="#collapseOne"
-            aria-expanded="true"
-            aria-controls="collapseOne"
-          >
-            Add Course Content
-          </button>
-        </h5>
-      </div>
-
-      <div *ngIf="showContenet == 'training'">
-        <div class="card-body">
-          <ul class="list-group">
-            <li class="list-group-item" *ngFor="let course of courseDetails">
-              <div class="row">
-                <div class="col">
-                  {{ course.courseName }}
-                </div>
-                <div class="col">
-                  <button
-                    class="btn btn-primary"
-                    [routerLink]="['/dashboard', course.courseName]"
-                  >
-                    Launch Course
-                  </button>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
+  <div class="" *ngIf="content == 'users'">
+    <div class="main-content">
+      <h2>Manage Users</h2>
     </div>
-    <div class="card">
-      <div class="card-header">
-        <h5 class="mb-0">
-          <button
-            class="btn btn-link collapsed"
-            type="button"
-            (click)="show('quizContent')"
-          >
-            Add Quiz Content
-          </button>
-        </h5>
-      </div>
-      <div *ngIf="showContenet == 'quizContent'">
-        <div class="card-body">
-          <div class="row">
-            <div class="col">
-              <form>
-                <div class="form-group">
-                  <div class="row">
-                    <div class="col">
-                      <label for="exampleInputEmail1">Training </label>
-                    </div>
-                    <div class="col">
-                      <input type="email" class="form-control" />
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="row">
-                    <div class="col">
-                      <label for="exampleInputEmail1">No Of Questions </label>
-                    </div>
-                    <div class="col">
-                      <input type="number" class="form-control" />
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="row">
-                    <div class="col">
-                      <label for="exampleInputEmail1">Answer Type</label>
-                    </div>
-                    <div class="col">
-                      <input type="number" class="form-control" />
-                    </div>
-                  </div>
-                </div>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
-            </div>
-            <div class="col"></div>
+    <div class="search">
+      <form>
+        <div class="form-row align-items-center">
+          <div class="col-auto my-1">
+            <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect"
+              >Preference</label
+            >
+            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+              <option selected>Choose...</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
           </div>
         </div>
-      </div>
+      </form>
     </div>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="content == 'roles'">
+    <div class="main-content">
+      <h2>Manage Roles</h2>
+    </div>
+
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>

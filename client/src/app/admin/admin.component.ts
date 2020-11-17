@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class AdminComponent implements OnInit {
   showContenet = null;
   courseDetails = [];
+  content = 'users';
   constructor(private cs: CommonService) {}
 
   ngOnInit(): void {
@@ -21,5 +22,9 @@ export class AdminComponent implements OnInit {
     } else {
       this.showContenet = content;
     }
+  }
+  showContent(content) {
+    this.content = content;
+    console.log(content);
   }
 }
