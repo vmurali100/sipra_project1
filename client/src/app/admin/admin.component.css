@@ -15,7 +15,7 @@ body {
 }
 .main-content {
   margin-bottom: 20px;
-  border-bottom: 3px solid yellow;
+  border-bottom: 3px solid #bfd732;
   margin-left: 10px;
   padding-bottom: 10px;
 }
@@ -36,4 +36,16 @@ body {
   margin-left: 160px; /* Same as the width of the sidenav */
   font-size: 18px; /* Increased text to enable scrolling */
   padding: 0px 10px;
+}
+.form-group {
+  margin-bottom: 1rem;
+  margin-left: 700px;
+}
+button.btn.btn-primary {
+  margin-left: 50px;
+  background-color: green;
+}
+.table .thead-dark th {
+  color: #fff;
+  background-color: rgb(79, 79, 245);
 }

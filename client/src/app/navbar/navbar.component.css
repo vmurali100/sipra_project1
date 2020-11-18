@@ -35,3 +35,18 @@ svg{
 .user_name {
   margin-left: 350px;
 }
+.navbar {
+  height:60px !important; 
+}
+@font-face {
+  font-family: "Adient Sans";
+  src: url("/assets/Fonts/AdientSansWeb-Regular.woff2") format("woff2");
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Adient Sans";
+  src: url("/assets/Fonts/AdientSansWeb-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-display: block;
+}
