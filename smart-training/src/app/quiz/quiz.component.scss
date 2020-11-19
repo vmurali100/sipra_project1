@@ -1,36 +1,39 @@
 .container {
-    text-align: center;
-  }
-  .wrpper {
-    background: #00465b;
-    height: 100%;
-  }
-  .answer {
-    cursor: pointer;
-    height: 50px;
-    margin-top: 10px;
-    padding-top: 10px;
-    background: green;
-    color: rgb(243, 245, 244);
-    font-weight: bold;
-  }
-  .card {
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: white;
-    background-clip: border-box;
-    border: 1px solid rgba(209, 171, 171, 0.125);
-    border-radius: .25rem;
-    margin-top: 30p;
-  }
-  card-body[_ngcontent-okc-c257] {
-    background-color: #00465b;
-    color: white;
+  text-align: center;
+}
+.wrpper {
+  background: #00465b;
+  height: 100%;
+}
+.answer {
+  cursor: pointer;
+  height: 50px;
+  margin-top: 10px;
+  padding-top: 10px;
+  background: green;
+  color: rgb(243, 245, 244);
+  font-weight: bold;
+}
+form {
+  text-align: left;
+}
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: white;
+  background-clip: border-box;
+  border: 1px solid rgba(209, 171, 171, 0.125);
+  border-radius: 0.25rem;
+  margin-top: 30p;
+}
+card-body[_ngcontent-okc-c257] {
+  background-color: #00465b;
+  color: white;
 }
 .card-body[_ngcontent-gkx-c257] {
   background-color: white;

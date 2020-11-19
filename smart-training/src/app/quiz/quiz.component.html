@@ -1,43 +1,73 @@
 <div class="container">
-    <div class="card">
-      <h5 class="card-header">Quiz</h5>
-      <div class="card-body" *ngIf="!isQuizCompleted">
-        <h5 class="card-title" style="text-align: left;margin-bottom: 20px;">{{qIndex+1}} . {{ currQuestion.question }}</h5>
-  
-        <!-- <div class="row">
-          <div class="col-md-6" *ngFor="let ans of currQuestion.answers">
-            <div class="answer">
-              <span (click)="submitAnswer(ans)">{{ ans }}</span>
-            </div>
-          </div>
-        </div> -->
+  <div class="card">
+    <h5 class="card-header">Quiz</h5>
+    <div class="card-body" *ngIf="!isQuizCompleted">
+      <h5 class="card-title" style="text-align: left; margin-bottom: 20px">
+        {{ qIndex + 1 }} . {{ currQuestion.question }}
+      </h5>
+      <form #quizForm="ngForm">
         <div class="row" *ngIf="currQuestion.answertype === 'single'">
-          <div class="col-md-6 answ" *ngFor="let ans of currQuestion.answers">
-              <div (click)="submitAnswer(ans)" style="text-align: left">
-                <input type="radio" value="ans" style="margin-right: 20px;" (click)="submitAnswer(ans)"/>{{ ans }}
-
-              </div>
-          </div>
-        </div>
-        <div class="row" *ngIf="currQuestion.answertype === 'multiple'">
-          <div class="col-md-6 answ" *ngFor="let ans of currQuestion.answers">
-            <div  (click)="submitAnswer(ans)"  style="text-align: left">
-              <input type="checkbox" value="ans"  style="margin-right: 20px;" />{{ ans }}
-
+          <div
+            class="col-md-6 answ"
+            *ngFor="let answer of currQuestion.answers"
+          >
+            <div style="text-align: left">
+              <input
+                type="radio"
+                value="{{ answer }}"
+                name="answer"
+                ngModel
+                style="margin-right: 20px"
+              />{{ answer }}
             </div>
           </div>
+          <div class="col-md-6">
+            <button
+              type="button"
+              class="btn btn-primary"
+              style="margin: 10px"
+              (click)="submitAnswer(quizForm)"
+            >
+              Submit
+            </button>
+          </div>
         </div>
-        <a href="#" class="btn btn-primary" style="margin: 10px">Submit</a>
+      </form>
+      <div class="row" *ngIf="currQuestion.answertype === 'multiple'">
+        <div class="col-md-6 answ" *ngFor="let answer of currQuestion.answers">
+          <div tyle="text-align: left">
+            <form #quizForm="ngForm">
+              <input
+                type="checkbox"
+                value="{{ answer }}"
+                name="answer"
+                ngModel
+                style="margin-right: 20px"
+                (change)="onChange(answer, $event.target.checked)"
+              />{{ answer }}
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <button
+            type="button"
+            class="btn btn-primary"
+            style="margin: 10px"
+            (click)="submitAnswer(quizForm)"
+          >
+            Submit
+          </button>
+        </div>
       </div>
-      <div *ngIf="isQuizCompleted">
-        <h2>Congrats .. You Scored {{ score }} out of 10</h2>
-        <img
+    </div>
+    <div *ngIf="isQuizCompleted">
+      <h2>Congrats .. You Scored {{ score }} out of 10</h2>
+      <img
         src="assets/back.png"
         alt="Back"
         routerLink="/dashboard"
         style="width: 50px; margin-left: 20px; cursor: pointer"
       />
-      </div>
     </div>
   </div>
-  
+</div>
