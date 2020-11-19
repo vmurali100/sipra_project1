@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="card">
+      <h5 class="card-header">Quiz</h5>
+      <div class="card-body" *ngIf="!isQuizCompleted">
+        <h5 class="card-title" style="text-align: left;margin-bottom: 20px;">{{qIndex+1}} . {{ currQuestion.question }}</h5>
+  
+        <!-- <div class="row">
+          <div class="col-md-6" *ngFor="let ans of currQuestion.answers">
+            <div class="answer">
+              <span (click)="submitAnswer(ans)">{{ ans }}</span>
+            </div>
+          </div>
+        </div> -->
+        <div class="row" *ngIf="currQuestion.answertype === 'single'">
+          <div class="col-md-6 answ" *ngFor="let ans of currQuestion.answers">
+              <div (click)="submitAnswer(ans)" style="text-align: left">
+                <input type="radio" value="ans" style="margin-right: 20px;" (click)="submitAnswer(ans)"/>{{ ans }}
+
+              </div>
+          </div>
+        </div>
+        <div class="row" *ngIf="currQuestion.answertype === 'multiple'">
+          <div class="col-md-6 answ" *ngFor="let ans of currQuestion.answers">
+            <div  (click)="submitAnswer(ans)"  style="text-align: left">
+              <input type="checkbox" value="ans"  style="margin-right: 20px;" />{{ ans }}
+
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn btn-primary" style="margin: 10px">Submit</a>
+      </div>
+      <div *ngIf="isQuizCompleted">
+        <h2>Congrats .. You Scored {{ score }} out of 10</h2>
+        <img
+        src="assets/back.png"
+        alt="Back"
+        routerLink="/dashboard"
+        style="width: 50px; margin-left: 20px; cursor: pointer"
+      />
+      </div>
+    </div>
+  </div>
+  

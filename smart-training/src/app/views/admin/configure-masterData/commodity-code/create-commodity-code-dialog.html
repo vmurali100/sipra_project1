@@ -1,0 +1,49 @@
+<div class="col-12">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 headerWrapper row">
+    <div class="col-12">
+      <h4 class="page-header"><span style="color: #bfd732"> π π π </span>Create Commodity </h4>
+      <button class="close" tabindex='-1' mat-button (click)=" onNoClick()">X</button>
+      <hr>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+    <div class="container-fluid" style="margin-top: 20px; margin-bottom: 10px;">
+      <div class="col-12 row">
+        <div class="form-group col-6 paddingzero">
+          <mat-form-field class="col-12" appearance="outline">
+            <mat-label class="col-sm-12 col-lg-6">Course Code </mat-label>
+            <input matInput placeholder="Enter Commodity Code " name="CostCenter" required>
+          </mat-form-field>
+        </div>
+        <div class="form-group col-6 paddingzero">
+          <mat-form-field class="col-12" appearance="outline">
+            <mat-label class="col-sm-12 col-lg-6"> Course Name</mat-label>
+            <input matInput placeholder="Enter Commodity Name " name="CostCenter" required>
+          </mat-form-field>
+        </div>
+      </div>
+
+
+      <div class="col-12 row">
+        <div class="form-group col-12 paddingzero">
+          <mat-form-field class="col-12" appearance="outline">
+            <mat-label class="col-sm-12 col-lg-6">Course Description </mat-label>
+            <textarea matInput placeholder="Enter Commodity Description" rows="5"></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="col-12 pull-right-align">
+        <div class="col-12 pull-right-align">
+          <div class="col-12 pull-right-align">
+            <button class="btn btn-adient" (click)=" onNoClick()">Cancel</button> &nbsp;&nbsp;
+            <button class="btn btn-adient">Create</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
